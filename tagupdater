@@ -2,8 +2,8 @@
 
 # List all semver tags and sort them; exclude pre-release tags
 gettags() {
-	git tag --list --sort='version:refname' 'v*.*.*' \
-		| grep --extended-regexp '^v([[:digit:]]+\.){2}[[:digit:]]+$'
+	git tag --list --sort='version:refname' '*.*.*' \
+		| grep --extended-regexp '^([[:digit:]]+\.){2}[[:digit:]]+$'
 }
 
 # Get latest semver tag
